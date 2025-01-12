@@ -6,7 +6,7 @@
 #### 2.1: Foundation Models 
 - AI21 labs (Jurassic-2 Series)
 - Titan by Amazon
-- Claude by Antropic
+- Claude by Anthropic
 - Command by Cohere
 - Llama 3 by Meta
 - Mistral by Mistral AI
@@ -52,11 +52,16 @@
 
 ### Deployment of Hugging face models using Sagemaker
 - Sagemaker provides ML capabilities that are purpose built for data scientists and developers to prepare, build, train and deploy high quality ML models efficiently.
-1. Configure Domain ( Set up for Organization/ Single User)
-    - User profiles: 1 user is created by default. *Users can launch Studio, Canvas, Tensorboard, Profiler*) separately.
-    - Space Mgmt: self-contained,durable storage container (like filesystem), to which app can be attached.(Storage, Lifecycle Config, Attach custom EBS) => *Run Spaces*
+1. Create a Domain (Set up for Organization/ Single User)
+    - User profiles: 1 user is created by default. *Users can launch Studio, Canvas, Tensorboard, and Profiler*) separately.
     - Environment: 
-    - Domain Settings: 
+    - Domain Settings:
+2. Sagemaker Studio has an entire ecosystem
+    - JupyterLab, Code Editor
+    - Prebuilt & automated solutions:  JumpStart, Model evaluations, AutoML.
+3. Create a JupyterLab Space
+   - Space Mgmt: self-contained, durable storage container (like a filesystem), to which the app can be attached. (Storage, Lifecycle Config, Attach custom EBS) => *Run Spaces*
+4. Choose options for Notebook, Console, Terminal, Markdown file etc  
    
    
 
