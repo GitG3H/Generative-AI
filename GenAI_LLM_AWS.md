@@ -51,7 +51,7 @@
 - **(Create Bucket, Bucket versioning, Upload Data, Manage Permissions,Set Configurations,Enable Replication, Lifecycle Management, Data Management, Monitoring and Logging)
 
 ### Deployment of Hugging face models using Sagemaker
-- Sagemaker provides ML capabilities that are purpose built for data scientists and developers to prepare, build, train and deploy high quality ML models efficiently.
+Sagemaker provides ML capabilities that are purpose-built for data scientists and developers to prepare, build, train, and deploy high-quality ML models efficiently.
 1. Create a Domain (Set up for Organization/ Single User)
     - User profiles: 1 user is created by default. *Users can launch Studio, Canvas, Tensorboard, and Profiler*) separately.
     - Environment: 
@@ -61,7 +61,24 @@
     - Prebuilt & automated solutions:  JumpStart, Model evaluations, AutoML.
 3. Create a JupyterLab Space
    - Space Mgmt: self-contained, durable storage container (like a filesystem), to which the app can be attached. (Storage, Lifecycle Config, Attach custom EBS) => *Run Spaces*
-4. Choose options for Notebook, Console, Terminal, Markdown file etc  
+4. Choose options for Notebook, Console, Terminal, Markdown file etc
+
+#### Code
+1. imports sagemaker, boto3, HuggingFaceModel,
+2. Create Sagemaker Session (sagemaker.Session())
+      - If there is no bucket, create one (sess.default_bucket())
+3. Role Management 
+      - sm.get_execution_role(), sess.boto_region_name
+      - *Once you have a role, you can call any model.*
+4. Create a Huggingface model, Deploy it to SageMaker Inference and Predict the data
+      - Parameters (env, role, versions of transformer, python, PyTorch)
+      - *HuggingFaceHub has models for multiple use cases.*
+      - huggingface_model.deploy(*specify instance type & count*)
+      - predictor.predict(data)
+5. Endpoints will be created
+   - Endpoints are locations where you send inference requests to your deployed ML models. After creating the endpoint you can add models, test it, and change settings as needed.
+   - Options: Autoscaling
+   
    
    
 
