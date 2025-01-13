@@ -78,6 +78,8 @@ Sagemaker provides ML capabilities that are purpose-built for data scientists an
 5. Endpoints will be created
    - Endpoints are locations where you send inference requests to your deployed ML models. After creating the endpoint you can add models, test it, and change settings as needed.
    - Options: Autoscaling
+  
+#### Amazon CodeWhisperer aka Amazon Q Developer
    
    
    
